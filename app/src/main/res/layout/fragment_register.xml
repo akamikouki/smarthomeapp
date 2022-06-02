@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Register">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:text="Register"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/fullname"
+        android:layout_width="291dp"
+        android:layout_height="52dp"
+        android:layout_alignTop="@id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="88dp"
+        android:hint="Enter your fullname"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="291dp"
+        android:layout_height="52dp"
+        android:layout_alignTop="@+id/fullname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:hint="Enter your E-mail"
+        android:inputType="textEmailAddress" />
+
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="291dp"
+        android:layout_height="52dp"
+        android:hint="Enter your password"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/email"
+        android:layout_marginTop="70dp"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/scannedarduino"
+        android:layout_width="291dp"
+        android:layout_height="52dp"
+        android:hint="Enter your Arduino Code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_alignTop="@+id/pass"
+        android:inputType="text" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/regbtn"
+        android:layout_below="@id/pass"
+        android:layout_alignTop="@id/scannedarduino"
+        android:layout_marginTop="100dp"
+
+        android:layout_centerHorizontal="true"
+       />
+
+</RelativeLayout>

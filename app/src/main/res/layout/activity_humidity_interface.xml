@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+    tools:context=".activities.humidity_interface">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="HUMIDITY CONTROL"
+    android:textColor="@color/black"
+    android:textSize="50dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="341dp"
+    android:background="@drawable/humidity_img"
+    android:layout_marginTop="80dp"
+    android:onClick="humidity"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:id="@+id/txthumidity"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        android:textSize="40dp"/>
+
+</LinearLayout>
+
+<!--<Button
+    android:id="@+id/refresh"
+
+    android:layout_width="92dp"
+    android:layout_height="94dp"
+    android:background="@drawable/refresh"
+    android:onClick="refreshtemp"
+    android:layout_gravity="center"
+
+
+    />-->
+
+</LinearLayout>

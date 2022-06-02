@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:actionBarNavMode="standard"
+    tools:context=".activities.clima_interface">
+
+    <ImageView
+        android:id="@+id/climaimg"
+        android:layout_width="409dp"
+        android:layout_height="183dp"
+        android:background="@drawable/climatisation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="261dp"
+        android:layout_height="91dp"
+        android:text="Air conditioner Control"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/climaimg"
+        android:layout_marginTop="36dp"
+        app:cardBackgroundColor="@color/primarycolor"
+        android:background="@color/primarycolor">
+
+        <TextView
+            android:id="@+id/ven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="            Air conditioner"
+            android:textColor="@color/blackNavy"
+            android:textSize="30dp"
+            android:textStyle="italic" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/onventilateur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:onClick="onventilateur"
+            android:text="ON" />
+
+
+        <Button
+            android:id="@+id/offventilateur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="50dp"
+
+            android:onClick="offventilateur"
+            android:text="OFF" />
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
