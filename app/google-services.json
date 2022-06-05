@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "1072921967209",
-    "firebase_url": "https://smarthome-4a2fa-default-rtdb.firebaseio.com",
-    "project_id": "smarthome-4a2fa",
-    "storage_bucket": "smarthome-4a2fa.appspot.com"
+    "project_number": "1080075472133",
+    "project_id": "ikramapp-4acb8",
+    "storage_bucket": "ikramapp-4acb8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1072921967209:android:bf772d9b74b8b6934f40f8",
+        "mobilesdk_app_id": "1:1080075472133:android:208a4aae91bc0b01943b6c",
         "android_client_info": {
           "package_name": "com.example.firstapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1072921967209-4in4i19jjkr0rmdua3uk7qmfps6475ck.apps.googleusercontent.com",
+          "client_id": "1080075472133-f7g7on6ga4ijh42vlvlhvmmn23gk8q89.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDtnrdVwyBIjTGSEZ1aQRtO9g1LEaj0g1I"
+          "current_key": "AIzaSyBtz6KgzEBBeFlKFPgFzy4iWjliEsDlbW4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1072921967209-4in4i19jjkr0rmdua3uk7qmfps6475ck.apps.googleusercontent.com",
+              "client_id": "1080075472133-f7g7on6ga4ijh42vlvlhvmmn23gk8q89.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
