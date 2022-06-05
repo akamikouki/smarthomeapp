@@ -1,10 +1,10 @@
 package com.example.firstapp.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.firstapp.R;
 import com.example.firstapp.SocketIO;
@@ -21,7 +21,7 @@ public class humidity_interface extends AppCompatActivity {
         setContentView(R.layout.activity_humidity_interface);
         ctxthumidity = findViewById(R.id.txthumidity);
 
-
+        //startService(new Intent(humidity_interface.this, socketservice.class));
         SocketIO app =  new SocketIO();
         mSocket = app.getSocket();
         mSocket.emit("refresh", "refTe");

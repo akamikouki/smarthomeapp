@@ -1,5 +1,7 @@
 package com.example.firstapp.fragments;
 
+import static com.example.firstapp.MainActivity.tokenfirebse;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.firstapp.MainActivity;
@@ -17,9 +20,10 @@ import com.example.firstapp.R;
 import com.example.firstapp.User;
 import com.example.firstapp.UserAPI;
 import com.example.firstapp.activities.Home_interface;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
-
-import org.jetbrains.annotations.NotNull;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -83,6 +87,7 @@ return;
     }
 
     private void SendPostReq(final User m) {
+
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -101,7 +106,7 @@ return;
                 if (response.code() == 200) {
                     MainActivity.token = new Gson().toJson(response.body());
 
-                    Toast.makeText(getContext(), "response.body!!!!" + MainActivity.token, Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(getContext(), "response.body!!!!" + MainActivity.token, Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getContext(), Home_interface.class);
                     startActivity(i);
                 } else if (response.code() == 404) {
@@ -120,38 +125,5 @@ return;
         });
 
     }
+
 }
-        /*
-        call.enqueue(new Callback<Void>() {
-            @Override
-            public void onResponse(@NotNull Call<Void> call, @NotNull Response<Void> response) {
-               if(response.code()==200){
-
-                   Toast.makeText(getContext(), "You have login successully !"+new Gson().toJson(response.body()), Toast.LENGTH_SHORT).show();
-
-                   Toast.makeText(getContext(), "You have logged in successully!!", Toast.LENGTH_SHORT).show();
-               }else if(response.code()==404) {
-                   Toast.makeText(getContext(), "error to search!!", Toast.LENGTH_SHORT).show();
-
-               }else{
-                   Toast.makeText(getContext(), "Failed to login!!!", Toast.LENGTH_SHORT).show();
-               }
-            }
-            @Override
-            public void onFailure(Call<Void> call, Throwable t) {
-                Toast.makeText(getContext(), "Failed to get Response!!!", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-}
-  /*  if (response.code() == 200) {
-                  //  String token = new Gson().toJson(response.body());
-                  //  Toast.makeText(getContext(), "You have login successully !" , Toast.LENGTH_SHORT).show();
-
-                    Toast.makeText(getContext(), "You have logged in successully!!", Toast.LENGTH_SHORT).show();
-                //} else if (response.code() == 404) {
-                    //Toast.makeText(getContext(), "error to search!!", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(getContext(), "Failed to login!!!", Toast.LENGTH_SHORT).show();
-                }*/

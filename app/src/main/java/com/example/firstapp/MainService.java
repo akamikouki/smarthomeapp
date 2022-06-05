@@ -1,22 +1,7 @@
 package com.example.firstapp;
 
-import static com.example.firstapp.MainActivity.BASE_URL;
-import static java.util.Collections.singletonList;
-import static java.util.Collections.singletonMap;
-
-import android.app.Service;
-import android.content.Intent;
-import android.os.IBinder;
-
-import androidx.annotation.Nullable;
-
-import java.net.URI;
-
-import io.socket.client.IO;
-import io.socket.client.Socket;
-
-public class MainService extends Service {
-  //  private MediaPlayer player;
+public class MainService  {
+  /*//  private MediaPlayer player;
   private Socket mSocket;
 
     @Override
@@ -47,5 +32,5 @@ public class MainService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
-
+*/
 }

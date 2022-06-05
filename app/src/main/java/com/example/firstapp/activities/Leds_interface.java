@@ -1,13 +1,11 @@
 package com.example.firstapp.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.firstapp.MainService;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.firstapp.R;
 import com.example.firstapp.SocketIO;
 
@@ -17,20 +15,17 @@ import io.socket.emitter.Emitter;
 public class Leds_interface extends AppCompatActivity {
     private Socket mSocket;
     private TextView statulamp1;
-    private Intent serviceIntent;
-    //private Socket mSocket;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leds_interface);
 
-        serviceIntent = new Intent(this, MainService.class);
-        startService(serviceIntent);
         statulamp1 = findViewById(R.id.statulamp1);
 
-       // SocketIO app =  new SocketIO();
-       // mSocket = app.getSocket();
+       SocketIO app =  new SocketIO();
+        mSocket = app.getSocket();
        mSocket.emit("statuled", "statu");
 
         mSocket.on("statuandroid", new Emitter.Listener() {

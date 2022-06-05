@@ -1,27 +1,15 @@
 package com.example.firstapp.activities;
 
-import static com.example.firstapp.MainActivity.BASE_URL;
-import static java.util.Collections.singletonList;
-import static java.util.Collections.singletonMap;
-
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.firstapp.MainActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.firstapp.R;
 import com.example.firstapp.SocketIO;
 
-import java.net.URI;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 
